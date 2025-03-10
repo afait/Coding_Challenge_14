@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Customer Support Ticket System</title>
+    <style>
+        .ticket-card {
+            padding: 15px;
+            margin: 15px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .high-priority {
+            border: 3px solid salmon;
+            background-color: blue;
+        }
+        .other-priority {
+            border: 3px solid brown;
+            background-color: lightblue;
+        }
+        header {
+            width: 100%;
+            padding: 10px;
+        }
+        header, footer {
+            text-align: center;
+            align-content: center;
+            background-color: rgb(red, green, blue);
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        footer p {
+            margin-bottom: 10px;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding-bottom: 50px;
+        }
+        main{
+            padding: 10px;
+        }
+        .resolve-btn, .save-btn, nput[type="text"] {
+            width: 100px
+        }
+        #addTicketBtn{
+            background-color: antiquewhite;
+            margin-left: 20px
+        };
+        
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Customer Support Ticket System</h1>
+    </header>
+    <main>
+        <div id="ticketContainer">
+
+        </div>
+        <div> <button id="addTicketBtn">Add Ticket</button>
+        </div>
+    </main>
+    <footer>
+        <p>2025 Customer Support System</p>
+    </footer>
     <script src="cc_14.js"></script>
 </body>
 </html>
