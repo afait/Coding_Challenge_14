@@ -59,3 +59,42 @@ document.getElementById('addTicketBtn').addEventListener('click', () => {
     createSupportTicket("Cali Nobles", "No Wifi", "Medium");
     createSupportTicket("Bob Ross", "Broken glass", "High");
 })
+
+
+
+
+//Task 3 - Highlighting High Priority Tickets
+
+function highlightHighPriorityTickets(){
+
+    //Selecting all tickets
+    const highPriorityTickets = document.querySelectorAll('.ticket-card');
+    
+    // Make tickets into an array format
+
+    const arrTickets = Array.from(highPriorityTickets);
+    arrTickets.forEach((ticket) => {
+        styleSingleCard(ticket);
+    })
+}
+
+
+function styleSingleCard(currentCard){
+  
+    const priority = currentCard.querySelector('.priority-label');
+    //Styles the various tickets
+        
+    
+    if(priority.textContent.replace('Priority: ', '').toLowerCase() === 'high'){
+        
+        currentCard.classList.remove('other-priority');
+        // Checks the priority and removes the non high priority
+
+    
+        currentCard.classList.add('high-priority');
+    }
+    else{
+        currentCard.classList.remove('high-priority');
+        currentCard.classList.add('other-priority');
+    }
+}
